@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+ <title>Predizione pioggia in Australia</title>
+</head>
+<body>
+ <h2>Pioggia in Australia</h2>
+ <form method="GET" action="{{ url_for("predict") }}">
+  <p>Quantità di pioggia registrata in mm: <input required type="number" min="0" step="any" name="RAINFALL"></p>
+  <p>Velocità (km/h) della raffica di vento più forte nelle 24 ore: <input required type="number" min="0" step="any" name="WIND_GUST_SPEED"></p>  
+  <p>Percentuale di umidità alle 15:00: <input required  type="number" min="0" step="any" name="HUMIDITY_3PM"></p>   
+  <p>Pressione atmosferica (hpa) ridotta a livello medio del mare alle 15:00: <input required  type="number" min="0" step="any" name="PRESSURE_3PM"></p>
+  <p>Prepiciptazione (mm) fino alle 9:00 supera 1mm(0=no, 1=sì): <input required type="number" min="0" max="1" step="any" name="RAIN_TODAY"></p>
+  <p><button type="submit">Conferma</button></p>
+ </form>
+</body>
+</html>

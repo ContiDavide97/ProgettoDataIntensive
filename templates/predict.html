@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+ <title>Predizione pioggia in Australia</title>
+</head>
+<body>
+ <h2>Pioggia in Australia</h2>
+ <p>Predizione: <b>{{ resp }}</b></p>
+ <form method="GET" action="{{ url_for("home") }}">
+    <p><button type="submit">Nuova previsione</button></p>
+ </form>
+</body>
+</html>
